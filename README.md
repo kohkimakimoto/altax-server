@@ -1,0 +1,1 @@
+# Altax Server Plugin
