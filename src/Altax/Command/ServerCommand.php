@@ -2,11 +2,14 @@
 namespace Altax\Command;
 
 use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Input\InputArgument;
 
 class ServerCommand extends \Altax\Command\Command
 {
     protected function configure()
     {
+        //$this->getConfig();
+
         $this
             ->setDescription("Runs php builtin server.")
             ->addOption(
@@ -23,6 +26,12 @@ class ServerCommand extends \Altax\Command\Command
                 'The port to serve the application on.', 
                 3000
                 )
+            ->addArgument(
+                'script',
+                InputArgument::OPTIONAL,
+                'Router script of the server.',
+                ''
+            )
             ;
     }
 
@@ -33,9 +42,13 @@ class ServerCommand extends \Altax\Command\Command
             throw new \Exception('This PHP binary is not version 5.4 or greater.');
         }
 
-        $task->getOutput()->writeln("Run");
+        $input = $task->getInput();
+        $output = $task->getOutput();
 
+        $host = $input->getOption('host');
+        $port = $input->getOption('port');
+        $script = $input->getArgument('script');
 
-        //passthru('"'.PHP_BINARY.'"'." -S {$host}:{$port} -t \"{$public}\" server.php");
+        passthru('"'.PHP_BINARY.'"'." -S {$host}:{$port} {$script}");
     }
 }

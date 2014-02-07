@@ -21,10 +21,12 @@ class ServerCommandTest extends \PHPUnit_Framework_TestCase
         $command = $application->find("test");
 
         $commandTester = new CommandTester($command);
+        
+        /*        
         $commandTester->execute(
             array("command" => $command->getName())
             );
-
-//        echo $commandTester->getDisplay();
+        echo $commandTester->getDisplay();
+        */
     }
 }
