@@ -53,6 +53,8 @@ class ServerCommand extends \Altax\Command\Command
         $port = $input->getOption('port');
         $script = $input->getArgument('script');
 
+        $input->info("Altax web server started on http://{$host}:{$port}");
+        
         passthru('"'.PHP_BINARY.'"'." -S {$host}:{$port} {$script}");
     }
 }
