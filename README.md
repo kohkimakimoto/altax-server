@@ -1,4 +1,4 @@
 # Altax Server Plugin
 
-Built-in web server plugin for altax.
+A built-in web server plugin for altax.
 

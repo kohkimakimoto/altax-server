@@ -1,6 +1,6 @@
 {
   "name": "kohkimakimoto/altax-server",
-  "description": "Altax builtin web server plugin.",
+  "description": "A built-in web server plugin for altax.",
   "keywords": ["altax", "plugin"],
   "homepage": "https://github.com/kohkimakimoto/altax-server",
   "license": "Apache License 2.0",
@@ -20,6 +20,5 @@
   },
   "autoload": {
     "psr-0": { "AltaxServer": "src/"}
-  },
-  "bin": ["bin/altax"]
+  }
 }
