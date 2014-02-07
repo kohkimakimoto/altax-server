@@ -8,7 +8,11 @@ class ServerCommand extends \Altax\Command\Command
 {
     protected function configure()
     {
-        //$this->getConfig();
+        $config = $this->getTaskConfig();
+
+        $host = isset($config["host"]) ? $config["host"] : '0.0.0.0';
+        $port = isset($config["port"]) ? $config["port"] : 3000;
+        $script = isset($config["script"]) ? $config["script"] : "";
 
         $this
             ->setDescription("Runs php builtin server.")
@@ -17,20 +21,20 @@ class ServerCommand extends \Altax\Command\Command
                 null,
                 InputOption::VALUE_OPTIONAL, 
                 'The host address to serve the application on.', 
-                '0.0.0.0'
+                $host
                 )
             ->addOption(
                 'port',
                 null,
                 InputOption::VALUE_OPTIONAL, 
                 'The port to serve the application on.', 
-                3000
+                $port
                 )
             ->addArgument(
                 'script',
                 InputArgument::OPTIONAL,
                 'Router script of the server.',
-                ''
+                $script
             )
             ;
     }
