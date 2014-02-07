@@ -34,7 +34,8 @@ class ServerCommand extends \Altax\Command\Command
         }
 
         $task->getOutput()->writeln("Run");
-        
+
+
         //passthru('"'.PHP_BINARY.'"'." -S {$host}:{$port} -t \"{$public}\" server.php");
     }
 }
