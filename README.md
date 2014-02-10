@@ -33,6 +33,16 @@ Run the server task command
 
 ## Configuration
 
+Exsample:
+
+    Task::register("server", "Altax\\Command\\ServerCommand")
+    ->config(array(
+        "host" => "localhost",
+        "port" => 1234,
+        "docroot" => "/path/to/document/root",
+        "script" => "/path/to/router/script.php",
+        ));
+
 ### host
 
 The host address of the server.
@@ -49,12 +59,3 @@ The document root of the server.
 
 Router script of the server.
 
-Exsample:
-
-    Task::register("server", "Altax\\Command\\ServerCommand")
-    ->config(array(
-        "host" => "localhost",
-        "port" => 1234,
-        "docroot" => "/path/to/document/root",
-        "script" => "/path/to/router/script.php",
-        ));
