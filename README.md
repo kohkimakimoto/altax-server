@@ -19,10 +19,9 @@ Run composer update
     $ cd .altax
     $ composer update
 
-Edit your `.altax/config.php` file like the following 
+Add the following line your `.altax/config.php` file.
 
     Task::register("server", "Altax\\Command\\ServerCommand");
-
 
 ## Usage
 
