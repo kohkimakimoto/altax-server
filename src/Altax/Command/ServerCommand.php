@@ -12,23 +12,31 @@ class ServerCommand extends \Altax\Command\Command
 
         $host = isset($config["host"]) ? $config["host"] : '0.0.0.0';
         $port = isset($config["port"]) ? $config["port"] : 3000;
-        $script = isset($config["script"]) ? $config["script"] : "";
+        $script = isset($config["script"]) ? $config["script"] : null;
+        $docroot = isset($config["docroot"]) ? $config["docroot"] : null;
 
         $this
             ->setDescription("Runs php builtin server.")
             ->addOption(
                 'host',
-                null,
+                'H',
                 InputOption::VALUE_OPTIONAL, 
-                'The host address to serve the application on.', 
+                'The host address of the server.', 
                 $host
                 )
             ->addOption(
                 'port',
-                null,
+                'p',
                 InputOption::VALUE_OPTIONAL, 
-                'The port to serve the application on.', 
+                'The port of the server.', 
                 $port
+                )
+            ->addOption(
+                'docroot',
+                't',
+                InputOption::VALUE_OPTIONAL, 
+                'The document root of the server.',
+                $docroot
                 )
             ->addArgument(
                 'script',
@@ -51,10 +59,21 @@ class ServerCommand extends \Altax\Command\Command
 
         $host = $input->getOption('host');
         $port = $input->getOption('port');
+        $docroot = $input->getOption('docroot');
         $script = $input->getArgument('script');
 
         $output->writeln("<info>Altax web server started on </info><comment>http://{$host}:{$port}</comment>");
+        if ($docroot) {
+            $output->writeln("<info>Document root: </info><comment>{$docroot}</comment>");
+        }
+        if ($script) {
+            $output->writeln("<info>Router script: </info><comment>{$script}</comment>");
+        }
         
-        passthru('"'.PHP_BINARY.'"'." -S {$host}:{$port} {$script}");
+        if ($docroot) {
+            passthru('"'.PHP_BINARY.'"'." -S {$host}:{$port} -t{$docroot} {$script}");
+        } else {
+            passthru('"'.PHP_BINARY.'"'." -S {$host}:{$port} {$script}");
+        }
     }
 }

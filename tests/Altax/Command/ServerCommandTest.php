@@ -22,6 +22,7 @@ class ServerCommandTest extends \PHPUnit_Framework_TestCase
 
         $commandTester = new CommandTester($command);
         
+        // Don't test. This command blocks function. Don't return.
         /*        
         $commandTester->execute(
             array("command" => $command->getName())
