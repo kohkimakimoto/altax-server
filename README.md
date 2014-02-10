@@ -32,7 +32,7 @@ Run the task command
 
 ## Configuration
 
-Exsample:
+Example:
 
 ```php
 Task::register("server", "Altax\\Command\\ServerCommand")
