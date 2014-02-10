@@ -23,11 +23,10 @@ Edit your `.altax/config.php` file like the following
 
     Task::register("server", "Altax\\Command\\ServerCommand");
 
-Run the server task command
-
-    $ altax server
 
 ## Usage
+
+Run the task command
 
     $ altax server [-H|--host[="..."]] [-p|--port[="..."]] [-t|--docroot[="..."]] [script]
 
@@ -35,13 +34,15 @@ Run the server task command
 
 Exsample:
 
-    Task::register("server", "Altax\\Command\\ServerCommand")
-    ->config(array(
-        "host" => "localhost",
-        "port" => 1234,
-        "docroot" => "/path/to/document/root",
-        "script" => "/path/to/router/script.php",
-        ));
+```php
+Task::register("server", "Altax\\Command\\ServerCommand")
+->config(array(
+    "host" => "localhost",
+    "port" => 1234,
+    "docroot" => "/path/to/document/root",
+    "script" => "/path/to/router/script.php",
+    ));
+```
 
 ### host
 
