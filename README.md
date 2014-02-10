@@ -10,7 +10,7 @@ Edit your `.altax/composer.json` file like the following
 
     {
       "require": {
-        "kohkimakimoto/altax-server": "~0.1"
+        "kohkimakimoto/altax-server": "~0.2"
       }
     }
 
