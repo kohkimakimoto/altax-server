@@ -1,6 +1,6 @@
 {
   "name": "kohkimakimoto/altax-server",
-  "description": "A built-in web server plugin for altax.",
+  "description": "Running php built-in web server via altax.",
   "keywords": ["altax", "plugin"],
   "homepage": "https://github.com/kohkimakimoto/altax-server",
   "license": "Apache License 2.0",
