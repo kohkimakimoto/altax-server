@@ -20,21 +20,21 @@ class ServerCommand extends \Altax\Command\Command
             ->addOption(
                 'host',
                 'H',
-                InputOption::VALUE_OPTIONAL, 
+                InputOption::VALUE_REQUIRED, 
                 'The host address of the server.', 
                 $host
                 )
             ->addOption(
                 'port',
                 'p',
-                InputOption::VALUE_OPTIONAL, 
+                InputOption::VALUE_REQUIRED, 
                 'The port of the server.', 
                 $port
                 )
             ->addOption(
                 'docroot',
                 't',
-                InputOption::VALUE_OPTIONAL, 
+                InputOption::VALUE_REQUIRED, 
                 'The document root of the server.',
                 $docroot
                 )
