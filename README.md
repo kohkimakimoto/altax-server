@@ -12,7 +12,7 @@ Edit your `.altax/composer.json` file like the following
 
     {
       "require": {
-        "kohkimakimoto/altax-server": "~0.2"
+        "kohkimakimoto/altax-server": "dev-master"
       }
     }
 
