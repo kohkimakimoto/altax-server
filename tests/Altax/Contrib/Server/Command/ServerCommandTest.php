@@ -1,11 +1,11 @@
 <?php
-namespace Test\Altax\Command;
+namespace Test\Altax\Contrib\Server\Command;
 
 use Symfony\Component\Console\Tester\CommandTester;
 use Altax\Console\Application;
 use Altax\Foundation\Container;
 use Altax\Module\Task\Resource\DefinedTask;
-use Altax\Command\ServerCommand;
+use Altax\Contrib\ServerCommand\ServerCommand;
 
 class ServerCommandTest extends \PHPUnit_Framework_TestCase
 {

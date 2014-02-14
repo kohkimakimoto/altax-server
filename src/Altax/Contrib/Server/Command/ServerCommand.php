@@ -1,5 +1,5 @@
 <?php
-namespace Altax\Command;
+namespace Altax\Contrib\Server\Command;
 
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;

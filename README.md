@@ -23,7 +23,7 @@ Run composer update
 
 Add the following line your `.altax/config.php` file.
 
-    Task::register('server', 'Altax\Command\ServerCommand');
+    Task::register('server', 'Altax\Contrib\Server\Command\ServerCommand');
 
 ## Usage
 
@@ -36,7 +36,7 @@ Run the task command
 Example:
 
 ```php
-Task::register('server', 'Altax\Command\ServerCommand')
+Task::register('server', 'Altax\Contrib\Server\Command\ServerCommand')
 ->config(array(
     "host" => "localhost",
     "port" => 1234,
