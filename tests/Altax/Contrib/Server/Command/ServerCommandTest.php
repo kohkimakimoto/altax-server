@@ -5,7 +5,7 @@ use Symfony\Component\Console\Tester\CommandTester;
 use Altax\Console\Application;
 use Altax\Foundation\Container;
 use Altax\Module\Task\Resource\DefinedTask;
-use Altax\Contrib\ServerCommand\ServerCommand;
+use Altax\Contrib\Server\Command\ServerCommand;
 
 class ServerCommandTest extends \PHPUnit_Framework_TestCase
 {
