@@ -16,10 +16,9 @@ Edit your `.altax/composer.json` file like the following
       }
     }
 
-Run composer update 
+Run altax update 
 
-    $ cd .altax
-    $ composer update
+    $ altax update
 
 Add the following line your `.altax/config.php` file.
 
