@@ -18,7 +18,7 @@
     "phpunit/phpunit": "3.*",
     "satooshi/php-coveralls": "dev-master"
   },
-  "minimum-stability": "alpha",
+  "minimum-stability": "dev",
   "autoload": {
     "psr-0": { "Altax\\Contrib\\Server": "src/"}
   }
