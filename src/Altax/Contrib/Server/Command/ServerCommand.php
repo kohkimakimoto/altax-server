@@ -10,7 +10,7 @@ class ServerCommand extends \Altax\Command\Command
     {
         $config = $this->getTaskConfig();
 
-        $description = isset($config["decription"]) ? $config["decription"] : "Runs php builtin server.";
+        $description = isset($config["description"]) ? $config["description"] : "Runs php builtin server.";
         $host = isset($config["host"]) ? $config["host"] : '0.0.0.0';
         $port = isset($config["port"]) ? $config["port"] : 3000;
         $script = isset($config["script"]) ? $config["script"] : null;
